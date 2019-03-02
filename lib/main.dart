@@ -136,4 +136,11 @@ class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           ),
         ));
   }
+
+  @override
+  void dispose() {
+    _mainButtonController.dispose();
+    _secondaryButtonController.dispose();
+    super.dispose();
+  }
 }
